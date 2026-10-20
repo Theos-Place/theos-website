@@ -1,0 +1,27 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Seccion from '../components/Seccion.astro';
+import TarjetaSede from '../components/TarjetaSede.astro';
+import sedes from '../data/sedes.json';
+import sitio from '../data/sitio.json';
+---
+
+<Base titulo="Nuestras sedes" descripcion="TODO: descripción de esta página.">
+  <Hero titulo="Nuestras sedes" bajada="TODO: bajada" />
+
+  <Seccion>
+    <div class="grilla">
+      {sedes.map((sede) => <TarjetaSede sede={sede} />)}
+    </div>
+  </Seccion>
+
+  <Seccion titulo="¿No hay una sede cerca?" alt>
+    <p>TODO: texto de contacto para quien no tiene sede cerca.</p>
+    <p style="margin-top: var(--esp-6)">
+      <a class="boton boton--primario" href={sitio.contacto.whatsappLink} rel="noopener">
+        Escribinos por WhatsApp
+      </a>
+    </p>
+  </Seccion>
+</Base>

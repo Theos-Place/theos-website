@@ -1,0 +1,14 @@
+{
+  "porQue": [
+    { "titulo": "Espacios",  "texto": "TODO" },
+    { "titulo": "Comunidad", "texto": "TODO" },
+    { "titulo": "Recursos",  "texto": "TODO" }
+  ],
+  "metodos": [
+    { "titulo": "SINPE Móvil",           "texto": "TODO", "detalle": "TODO" },
+    { "titulo": "Transferencia Bancaria","texto": "TODO", "detalle": "TODO" },
+    { "titulo": "Tarjeta",               "texto": "TODO", "detalle": "TODO", "url": "#TODO" },
+    { "titulo": "Cargo Automático",      "texto": "TODO", "detalle": "TODO", "url": "#TODO" }
+  ],
+  "gracias": "TODO: mensaje de agradecimiento."
+}

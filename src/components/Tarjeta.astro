@@ -1,0 +1,25 @@
+---
+// Tarjeta genérica: título + texto + enlace opcional.
+const { titulo, texto, url, imagen, etiqueta } = Astro.props;
+---
+<article class="tarjeta">
+  {imagen && <img class="tarjeta__media" src={imagen} alt="" loading="lazy" />}
+  {etiqueta && <span class="tarjeta__etiqueta">{etiqueta}</span>}
+  <h3>{titulo}</h3>
+  {texto && <p class="tarjeta__texto">{texto}</p>}
+  <slot />
+  {url && <a class="boton boton--secundario" href={url}>Ver más</a>}
+</article>
+
+<style>
+  .tarjeta__etiqueta {
+    align-self: start;
+    padding: var(--esp-1) var(--esp-3);
+    border-radius: var(--radio-full);
+    background: var(--color-azul-pasivo);
+    color: var(--color-ultra-blue);
+    font-size: var(--texto-xs);
+    font-weight: var(--peso-medio);
+  }
+  .tarjeta .boton { align-self: start; margin-top: auto; }
+</style>

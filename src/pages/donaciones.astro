@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Seccion from '../components/Seccion.astro';
+import Tarjeta from '../components/Tarjeta.astro';
+import datos from '../data/donaciones.json';
+---
+
+<Base titulo="Donaciones" descripcion="TODO: descripción de esta página.">
+  <Hero titulo="Donaciones" bajada="TODO: bajada" />
+
+  <Seccion titulo="¿Por qué donar?">
+    <div class="grilla">
+      {datos.porQue.map((p) => <Tarjeta titulo={p.titulo} texto={p.texto} />)}
+    </div>
+  </Seccion>
+
+  <Seccion titulo="¿Cómo donar?" alt>
+    <div class="grilla">
+      {datos.metodos.map((m) => (
+        <Tarjeta titulo={m.titulo} texto={m.texto} url={m.url}>
+          <p class="tarjeta__texto"><strong>{m.detalle}</strong></p>
+        </Tarjeta>
+      ))}
+    </div>
+  </Seccion>
+
+  <Seccion titulo="Gracias por tu generosidad">
+    <p>{datos.gracias}</p>
+  </Seccion>
+</Base>

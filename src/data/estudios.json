@@ -1,0 +1,35 @@
+{
+  "queEs": "TODO: explicación de qué es un Estudio de Biblia.",
+  "niveles": [
+    { "titulo": "Nivel 1", "texto": "TODO", "duracion": "TODO" },
+    { "titulo": "Nivel 2", "texto": "TODO", "duracion": "TODO" },
+    { "titulo": "Nivel 3", "texto": "TODO", "duracion": "TODO" },
+    { "titulo": "Nivel 4", "texto": "TODO", "duracion": "TODO" }
+  ],
+  "capacitaciones": [
+    { "titulo": "Administrando el Dinero",            "texto": "TODO" },
+    { "titulo": "Evangelismo",                        "texto": "TODO" },
+    { "titulo": "Amor sin Fronteras",                 "texto": "TODO" },
+    { "titulo": "Sirviendo Cómo Jesús",               "texto": "TODO" },
+    { "titulo": "Cómo Tomar Buenas Decisiones",       "texto": "TODO" },
+    { "titulo": "Panorama",                           "texto": "TODO" },
+    { "titulo": "Hebreos",                            "texto": "TODO" },
+    { "titulo": "Religiones del Mundo",               "texto": "TODO" },
+    { "titulo": "Romanos",                            "texto": "TODO" },
+    { "titulo": "Hechos",                             "texto": "TODO" },
+    { "titulo": "Defendiendo la Fe (Apologética)",    "texto": "TODO" },
+    { "titulo": "Evangelios",                         "texto": "TODO" },
+    { "titulo": "Prematrimonial",                     "texto": "TODO" },
+    { "titulo": "Matrimonios",                        "texto": "TODO" },
+    { "titulo": "Hermenéutica",                       "texto": "TODO" }
+  ],
+  "inscripcion": {
+    "texto": "TODO: cuándo y cómo inscribirse.",
+    "url": "https://theosplace.ccbchurch.com/goto/forms/TODO/responses/new"
+  },
+  "retomar": [
+    { "titulo": "Si estabas en Niveles 1–4:",   "texto": "TODO", "url": "#TODO" },
+    { "titulo": "Si estabas en una Capacitación:", "texto": "TODO", "url": "#TODO" }
+  ],
+  "planEstudios": { "texto": "TODO", "archivo": "/docs/TODO-plan-estudios.pdf" }
+}

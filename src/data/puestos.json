@@ -1,0 +1,12 @@
+[
+  {
+    "slug": "TODO-puesto",
+    "titulo": "TODO: nombre del puesto",
+    "area": "TODO",
+    "sede": "TODO",
+    "descripcion": "TODO: qué hace esta persona.",
+    "requisitos": ["TODO"],
+    "url": "https://theosplace.ccbchurch.com/goto/forms/TODO/responses/new",
+    "activo": true
+  }
+]

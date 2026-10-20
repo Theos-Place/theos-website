@@ -1,0 +1,31 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Seccion from '../components/Seccion.astro';
+import Tarjeta from '../components/Tarjeta.astro';
+import actividades from '../data/actividades.json';
+
+const activas = actividades.filter((a) => a.activo);
+---
+
+<Base titulo="Actividades" descripcion="TODO: descripción de esta página.">
+  <Hero titulo="Actividades" bajada="TODO: bajada" />
+
+  <Seccion>
+    {activas.length === 0 ? (
+      <p>Por ahora no hay actividades publicadas.</p>
+    ) : (
+      <div class="grilla">
+        {activas.map((a) => (
+          <Tarjeta
+            titulo={a.titulo}
+            texto={a.descripcion}
+            url={a.url}
+            imagen={a.imagen}
+            etiqueta={a.categoria}
+          />
+        ))}
+      </div>
+    )}
+  </Seccion>
+</Base>

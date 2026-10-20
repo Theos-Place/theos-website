@@ -1,0 +1,13 @@
+[
+  { "slug": "meridiano",      "nombre": "Meridiano",      "destacada": true,  "provincia": "TODO", "direccion": "TODO", "horario": "TODO", "waze": "https://waze.com/ul/TODO", "imagen": "/img/sedes/TODO.jpg" },
+  { "slug": "antares",        "nombre": "Antares",        "destacada": true,  "provincia": "TODO", "direccion": "TODO", "horario": "TODO", "waze": "https://waze.com/ul/TODO", "imagen": "/img/sedes/TODO.jpg" },
+  { "slug": "pedregal",       "nombre": "Pedregal",       "destacada": true,  "provincia": "TODO", "direccion": "TODO", "horario": "TODO", "waze": "https://waze.com/ul/TODO", "imagen": "/img/sedes/TODO.jpg" },
+  { "slug": "liberia",        "nombre": "Liberia",        "destacada": false, "provincia": "TODO", "direccion": "TODO", "horario": "TODO", "waze": "https://waze.com/ul/TODO", "imagen": "/img/sedes/TODO.jpg" },
+  { "slug": "guapiles",       "nombre": "Guápiles",       "destacada": false, "provincia": "TODO", "direccion": "TODO", "horario": "TODO", "waze": "https://waze.com/ul/TODO", "imagen": "/img/sedes/TODO.jpg" },
+  { "slug": "cartago",        "nombre": "Cartago",        "destacada": false, "provincia": "TODO", "direccion": "TODO", "horario": "TODO", "waze": "https://waze.com/ul/TODO", "imagen": "/img/sedes/TODO.jpg" },
+  { "slug": "perez-zeledon",  "nombre": "Pérez Zeledón",  "destacada": false, "provincia": "TODO", "direccion": "TODO", "horario": "TODO", "waze": "https://waze.com/ul/TODO", "imagen": "/img/sedes/TODO.jpg" },
+  { "slug": "potrero",        "nombre": "Potrero",        "destacada": false, "provincia": "TODO", "direccion": "TODO", "horario": "TODO", "waze": "https://waze.com/ul/TODO", "imagen": "/img/sedes/TODO.jpg" },
+  { "slug": "alajuela",       "nombre": "Alajuela",       "destacada": false, "provincia": "TODO", "direccion": "TODO", "horario": "TODO", "waze": "https://waze.com/ul/TODO", "imagen": "/img/sedes/TODO.jpg" },
+  { "slug": "madrid",         "nombre": "Madrid",         "destacada": false, "provincia": "España", "direccion": "TODO", "horario": "TODO", "waze": "", "imagen": "/img/sedes/TODO.jpg" },
+  { "slug": "madrid-home",    "nombre": "Madrid Home",    "destacada": false, "provincia": "España", "direccion": "TODO", "horario": "TODO", "waze": "", "imagen": "/img/sedes/TODO.jpg" }
+]

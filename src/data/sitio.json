@@ -1,0 +1,20 @@
+{
+  "nombre": "Theos Place",
+  "lema": "Guiamos a las personas a disfrutar de una relación cada vez más cercana con Dios",
+  "descripcion": "TODO: descripción para buscadores (150-160 caracteres).",
+  "url": "https://www.theosplace.org",
+  "contacto": {
+    "whatsapp": "+506 8390 4577",
+    "whatsappLink": "https://wa.me/50683904577",
+    "email": "info@theosplace.org"
+  },
+  "redes": [
+    { "nombre": "Instagram", "url": "https://www.instagram.com/_theosplace/" }
+  ],
+  "enlacesRapidos": [
+    { "texto": "Recursos", "url": "#TODO" },
+    { "texto": "Software", "url": "#TODO" },
+    { "texto": "Checkin", "url": "#TODO" },
+    { "texto": "Contacto", "url": "#TODO" }
+  ]
+}

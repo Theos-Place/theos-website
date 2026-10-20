@@ -1,0 +1,33 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Seccion from '../components/Seccion.astro';
+import Tarjeta from '../components/Tarjeta.astro';
+import datos from '../data/quienes-somos.json';
+---
+
+<Base titulo="¿Quiénes Somos?" descripcion="TODO: descripción de esta página.">
+  <Hero titulo="¿Quiénes Somos?" />
+
+  <Seccion titulo="Nuestra Misión">
+    <p>{datos.mision}</p>
+  </Seccion>
+
+  <Seccion titulo="¿En qué creemos?" alt>
+    <div class="grilla">
+      {datos.creencias.map((c) => <Tarjeta titulo={c.titulo} texto={c.texto} />)}
+    </div>
+  </Seccion>
+
+  <Seccion titulo="Nuestros Valores">
+    <div class="grilla">
+      {datos.valores.map((v) => <Tarjeta titulo={v.titulo} texto={v.texto} />)}
+    </div>
+  </Seccion>
+
+  <Seccion titulo="¿Por qué Theos?" alt>
+    <div class="grilla">
+      {datos.porQueTheos.map((p) => <Tarjeta titulo={p.titulo} texto={p.texto} />)}
+    </div>
+  </Seccion>
+</Base>

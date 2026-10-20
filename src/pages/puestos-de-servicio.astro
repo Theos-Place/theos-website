@@ -1,0 +1,25 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Seccion from '../components/Seccion.astro';
+import Tarjeta from '../components/Tarjeta.astro';
+import puestos from '../data/puestos.json';
+
+const activos = puestos.filter((p) => p.activo);
+---
+
+<Base titulo="Puestos de Servicio" descripcion="TODO: descripción de esta página.">
+  <Hero titulo="Puestos de Servicio" bajada="TODO: bajada" />
+
+  <Seccion>
+    {activos.length === 0 ? (
+      <p>Por ahora no hay puestos abiertos.</p>
+    ) : (
+      <div class="grilla">
+        {activos.map((p) => (
+          <Tarjeta titulo={p.titulo} texto={p.descripcion} url={p.url} etiqueta={p.area} />
+        ))}
+      </div>
+    )}
+  </Seccion>
+</Base>

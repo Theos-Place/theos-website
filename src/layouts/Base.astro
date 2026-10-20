@@ -1,0 +1,41 @@
+---
+import '../styles/tokens.css';
+import '../styles/base.css';
+import '../styles/componentes.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import sitio from '../data/sitio.json';
+
+const { titulo, descripcion } = Astro.props;
+const tituloCompleto = titulo ? `${titulo} | ${sitio.nombre}` : `${sitio.nombre} | ${sitio.lema}`;
+const desc = descripcion ?? sitio.descripcion;
+---
+
+<!doctype html>
+<html lang="es-CR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{tituloCompleto}</title>
+    <meta name="description" content={desc} />
+    <link rel="canonical" href={new URL(Astro.url.pathname, sitio.url)} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <!-- Open Graph / redes -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={tituloCompleto} />
+    <meta property="og:description" content={desc} />
+    <meta property="og:url" content={new URL(Astro.url.pathname, sitio.url)} />
+    <!-- TODO: subir imagen a public/og-image.jpg (1200x630) -->
+    <meta property="og:image" content={new URL('/og-image.jpg', sitio.url)} />
+  </head>
+
+  <body>
+    <a class="saltar-contenido" href="#contenido">Saltar al contenido</a>
+    <Header />
+    <main id="contenido">
+      <slot />
+    </main>
+    <Footer />
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "mision": "TODO: texto de la misión.",
+  "creencias": [
+    { "titulo": "La Biblia",          "texto": "TODO" },
+    { "titulo": "Relación con Dios",  "texto": "TODO" },
+    { "titulo": "Salvación",          "texto": "TODO" },
+    { "titulo": "Trinidad",           "texto": "TODO" },
+    { "titulo": "Madurez espiritual", "texto": "TODO" },
+    { "titulo": "Unión de creyentes", "texto": "TODO" }
+  ],
+  "valores": [
+    { "titulo": "Autoridad Bíblica",      "texto": "TODO" },
+    { "titulo": "Evangelismo",            "texto": "TODO" },
+    { "titulo": "Intimidad con Dios",     "texto": "TODO" },
+    { "titulo": "Ambientes atractivos",   "texto": "TODO" },
+    { "titulo": "Crecer juntos",          "texto": "TODO" },
+    { "titulo": "Servicio",               "texto": "TODO" },
+    { "titulo": "Discipulado constante",  "texto": "TODO" }
+  ],
+  "porQueTheos": [
+    { "titulo": "Theos",           "texto": "TODO" },
+    { "titulo": "Place",           "texto": "TODO" },
+    { "titulo": "El símbolo Theta","texto": "TODO" }
+  ]
+}

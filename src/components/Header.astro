@@ -1,0 +1,119 @@
+---
+import navegacion from '../data/navegacion.json';
+import sitio from '../data/sitio.json';
+const actual = Astro.url.pathname;
+---
+
+<header class="header">
+  <div class="contenedor header__inner">
+    <a href="/" class="header__logo" aria-label={`${sitio.nombre} — inicio`}>
+      <!-- TODO: reemplazar por el logo oficial (public/logo.svg) -->
+      <span>{sitio.nombre}</span>
+    </a>
+
+    <button class="header__toggle" aria-expanded="false" aria-controls="nav-principal">
+      <span class="visualmente-oculto">Abrir menú</span>
+      <span class="header__hamburguesa" aria-hidden="true"></span>
+    </button>
+
+    <nav id="nav-principal" class="header__nav" aria-label="Navegación principal">
+      <ul class="header__lista">
+        {navegacion.map((item) => (
+          <li>
+            <a
+              href={item.url}
+              aria-current={actual === item.url ? 'page' : undefined}
+            >{item.texto}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<style>
+  .header {
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    height: var(--alto-header);
+    background: color-mix(in srgb, var(--color-blanco) 92%, transparent);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-borde);
+  }
+  .header__inner {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--esp-6);
+  }
+  .header__logo {
+    font-family: var(--fuente-titulo);
+    font-weight: var(--peso-bold);
+    font-size: var(--texto-lg);
+    text-decoration: none;
+  }
+  .header__lista {
+    display: flex;
+    gap: var(--esp-6);
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .header__lista a {
+    text-decoration: none;
+    font-size: var(--texto-sm);
+  }
+  .header__lista a[aria-current='page'] { color: var(--color-primario); }
+
+  .header__toggle {
+    display: none;
+    background: none;
+    border: 0;
+    padding: var(--esp-2);
+    cursor: pointer;
+  }
+  .header__hamburguesa,
+  .header__hamburguesa::before,
+  .header__hamburguesa::after {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: var(--color-texto);
+    border-radius: 2px;
+  }
+  .header__hamburguesa::before,
+  .header__hamburguesa::after {
+    content: '';
+    position: relative;
+  }
+  .header__hamburguesa::before { top: -7px; }
+  .header__hamburguesa::after  { top: 5px; }
+
+  /* TODO: definir el comportamiento del menú móvil con Diseño */
+  @media (max-width: 860px) {
+    .header__toggle { display: block; }
+    .header__nav {
+      position: absolute;
+      inset: var(--alto-header) 0 auto 0;
+      background: var(--color-blanco);
+      border-bottom: 1px solid var(--color-borde);
+      padding: var(--esp-6) var(--gutter);
+      display: none;
+    }
+    .header__nav[data-abierto] { display: block; }
+    .header__lista { flex-direction: column; gap: var(--esp-4); }
+  }
+</style>
+
+<script>
+  const toggle = document.querySelector('.header__toggle');
+  const nav = document.getElementById('nav-principal');
+  toggle?.addEventListener('click', () => {
+    const abierto = nav?.hasAttribute('data-abierto');
+    if (abierto) nav?.removeAttribute('data-abierto');
+    else nav?.setAttribute('data-abierto', '');
+    toggle.setAttribute('aria-expanded', String(!abierto));
+  });
+</script>

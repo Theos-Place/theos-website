@@ -1,0 +1,60 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Seccion from '../components/Seccion.astro';
+import Tarjeta from '../components/Tarjeta.astro';
+import TarjetaSede from '../components/TarjetaSede.astro';
+import TarjetaEvento from '../components/TarjetaEvento.astro';
+import sitio from '../data/sitio.json';
+import experiencia from '../data/experiencia.json';
+import sedes from '../data/sedes.json';
+import eventos from '../data/eventos.json';
+
+const destacadas = sedes.filter((s) => s.destacada);
+const activos = eventos.filter((e) => e.activo);
+---
+
+<Base>
+  <Hero titulo={sitio.lema}>
+    <a class="boton boton--primario" href="/sedes">Buscá tu sede</a>
+    <a class="boton boton--secundario" href="/quienes-somos">Conocenos</a>
+  </Hero>
+
+  <Seccion titulo="¿Qué es Theos?" alt>
+    <!-- TODO: texto introductorio + imagen o video -->
+    <p>TODO: contenido de "¿Qué es Theos?"</p>
+  </Seccion>
+
+  <Seccion titulo="La experiencia" bajada="TODO: bajada de la sección">
+    <div class="grilla">
+      {experiencia.map((item) => (
+        <Tarjeta titulo={item.titulo} texto={item.texto} url={item.url} />
+      ))}
+    </div>
+  </Seccion>
+
+  <Seccion titulo="Buscá tu sede" alt>
+    <div class="grilla">
+      {destacadas.map((sede) => <TarjetaSede sede={sede} />)}
+    </div>
+    <p style="margin-top: var(--esp-8)">
+      <a class="boton boton--secundario" href="/sedes">Ver todas las sedes</a>
+    </p>
+  </Seccion>
+
+  <Seccion titulo="Eventos">
+    <div class="grilla">
+      {activos.map((evento) => <TarjetaEvento evento={evento} />)}
+    </div>
+  </Seccion>
+
+  <Seccion titulo="Seguinos en Instagram" alt>
+    <!-- TODO: decidir cómo mostrar el feed.
+         El sitio actual usa Elfsight (script externo, pesado).
+         Alternativa liviana: 6 imágenes estáticas + enlace al perfil. -->
+    <p>TODO: feed de Instagram</p>
+    <a class="boton boton--secundario" href={sitio.redes[0].url} rel="noopener">
+      Ver el perfil
+    </a>
+  </Seccion>
+</Base>

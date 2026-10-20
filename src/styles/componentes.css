@@ -1,0 +1,98 @@
+/* Clases reutilizables. Si una clase se usa en una sola
+   página, mejor dejarla en el <style> de esa página. */
+
+/* --- Contenedor y secciones ----------------------------- */
+.contenedor {
+  width: 100%;
+  max-width: var(--ancho-max);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+.seccion { padding-block: var(--esp-16); }
+.seccion--alt { background: var(--color-fondo-alt); }
+
+.seccion__encabezado {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  margin-bottom: var(--esp-8);
+}
+.seccion__bajada {
+  color: var(--color-texto-suave);
+  font-size: var(--texto-lg);
+}
+
+/* --- Grilla genérica ------------------------------------ */
+.grilla {
+  display: grid;
+  gap: var(--esp-6);
+  grid-template-columns: repeat(auto-fit, minmax(min(280px, 100%), 1fr));
+}
+.grilla--2 { grid-template-columns: repeat(auto-fit, minmax(min(380px, 100%), 1fr)); }
+
+/* --- Tarjeta -------------------------------------------- */
+.tarjeta {
+  display: flex;
+  flex-direction: column;
+  gap: var(--esp-3);
+  padding: var(--esp-6);
+  background: var(--color-blanco);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-md);
+  box-shadow: var(--sombra-sm);
+  transition: box-shadow var(--transicion), transform var(--transicion);
+}
+.tarjeta:has(a:hover) {
+  box-shadow: var(--sombra-md);
+  transform: translateY(-2px);
+}
+.tarjeta__media {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  border-radius: var(--radio-sm);
+  background: var(--color-fondo-alt);
+}
+.tarjeta__texto { color: var(--color-texto-suave); }
+
+/* --- Botones -------------------------------------------- */
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--esp-2);
+  padding: var(--esp-3) var(--esp-6);
+  border: 1px solid transparent;
+  border-radius: var(--radio-full);
+  font-weight: var(--peso-medio);
+  text-decoration: none;
+  cursor: pointer;
+  transition: background var(--transicion), color var(--transicion);
+}
+.boton--primario {
+  background: var(--color-primario);
+  color: var(--color-blanco);
+}
+.boton--primario:hover {
+  background: var(--color-primario-oscuro);
+  color: var(--color-blanco);
+}
+.boton--secundario {
+  background: transparent;
+  border-color: var(--color-ultra-blue);
+  color: var(--color-ultra-blue);
+}
+.boton--secundario:hover {
+  background: var(--color-ultra-blue);
+  color: var(--color-blanco);
+}
+
+/* --- Utilidades ----------------------------------------- */
+.visualmente-oculto {
+  position: absolute;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

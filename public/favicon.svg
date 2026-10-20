@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- TODO: reemplazar por el símbolo Theta del Brand Book -->
+  <rect width="32" height="32" rx="7" fill="#161440"/>
+  <circle cx="16" cy="16" r="7.5" fill="none" stroke="#EF5554" stroke-width="2.5"/>
+  <path d="M10.5 16h11" stroke="#EF5554" stroke-width="2.5" stroke-linecap="round"/>
+</svg>

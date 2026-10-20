@@ -1,0 +1,13 @@
+[
+  {
+    "slug": "TODO-evento-1",
+    "titulo": "TODO: nombre del evento",
+    "fecha": "2026-01-01",
+    "fechaTexto": "TODO: 1 de enero",
+    "lugar": "TODO",
+    "descripcion": "TODO: una o dos líneas.",
+    "imagen": "/img/eventos/TODO.jpg",
+    "inscripcion": "https://theosplace.ccbchurch.com/goto/forms/TODO/responses/new",
+    "activo": true
+  }
+]

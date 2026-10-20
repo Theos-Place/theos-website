@@ -1,0 +1,12 @@
+---
+const { sede } = Astro.props;
+---
+<article class="tarjeta">
+  <img class="tarjeta__media" src={sede.imagen} alt="" loading="lazy" />
+  <h3>{sede.nombre}</h3>
+  <p class="tarjeta__texto">{sede.direccion}</p>
+  <p class="tarjeta__texto"><strong>Horario:</strong> {sede.horario}</p>
+  {sede.waze && (
+    <a class="boton boton--secundario" href={sede.waze} rel="noopener">Cómo llegar</a>
+  )}
+</article>

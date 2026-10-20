@@ -1,0 +1,96 @@
+/* ===========================================================
+   TOKENS DE MARCA — Theos Place
+   Fuente: Brand Book Theos.pdf
+   Este es el ÚNICO archivo que hay que tocar para cambiar
+   colores, tipografías o espaciados en todo el sitio.
+   =========================================================== */
+
+:root {
+  /* --- Paleta (Brand Book) ------------------------------- */
+  --color-primario:      #EF5554;  /* "Cream orange" */
+  --color-ultra-blue:    #161440;
+  --color-azul-pasivo:   #70BDC2;
+  --color-blanco:        #FFFFFF;
+
+  /* Derivados para UI. Ajustar si Diseño define otros. */
+  --color-primario-oscuro: #D13F3E;
+  --color-texto:         var(--color-ultra-blue);
+  --color-texto-suave:   #5A5873;
+  --color-fondo:         var(--color-blanco);
+  --color-fondo-alt:     #F6F6F9;
+  --color-borde:         #E3E3EC;
+
+  /* --- Tipografía ---------------------------------------- */
+  /* AXis: titulares y subtitulares. Gilmer: cuerpos y copys.
+     Ambas son de licencia comercial, NO están en Google Fonts.
+     Poné los archivos en public/fonts/ y descomentá los
+     @font-face de abajo. Mientras tanto corren los fallbacks. */
+  --fuente-titulo: "AXis", "Poppins", system-ui, sans-serif;
+  --fuente-texto:  "Gilmer", "Inter", system-ui, sans-serif;
+
+  --peso-regular: 400;
+  --peso-medio:   500;
+  --peso-bold:    700;
+
+  /* Escala fluida: se adapta sola de móvil a desktop */
+  --texto-xs:   clamp(0.78rem, 0.76rem + 0.1vw,  0.84rem);
+  --texto-sm:   clamp(0.88rem, 0.85rem + 0.15vw, 0.95rem);
+  --texto-base: clamp(1rem,    0.97rem + 0.2vw,  1.08rem);
+  --texto-lg:   clamp(1.15rem, 1.08rem + 0.4vw,  1.35rem);
+  --texto-xl:   clamp(1.4rem,  1.25rem + 0.8vw,  1.85rem);
+  --texto-2xl:  clamp(1.75rem, 1.45rem + 1.5vw,  2.6rem);
+  --texto-3xl:  clamp(2.1rem,  1.6rem + 2.5vw,   3.6rem);
+
+  /* --- Espaciado ----------------------------------------- */
+  --esp-1: 0.25rem;
+  --esp-2: 0.5rem;
+  --esp-3: 0.75rem;
+  --esp-4: 1rem;
+  --esp-6: 1.5rem;
+  --esp-8: 2rem;
+  --esp-12: 3rem;
+  --esp-16: 4rem;
+  --esp-24: 6rem;
+
+  /* --- Layout -------------------------------------------- */
+  --ancho-max:      1200px;
+  --ancho-texto:    65ch;
+  --gutter:         clamp(1rem, 4vw, 2.5rem);
+  --alto-header:    72px;
+
+  /* --- Formas y sombras ---------------------------------- */
+  --radio-sm:  6px;
+  --radio-md:  12px;
+  --radio-lg:  20px;
+  --radio-full: 999px;
+
+  --sombra-sm: 0 1px 2px rgb(22 20 64 / 0.06);
+  --sombra-md: 0 4px 16px rgb(22 20 64 / 0.08);
+  --sombra-lg: 0 12px 32px rgb(22 20 64 / 0.12);
+
+  --transicion: 180ms ease;
+}
+
+/* -----------------------------------------------------------
+   TIPOGRAFÍAS PROPIAS
+   Descomentá cuando tengás los archivos .woff2 en public/fonts/
+   -----------------------------------------------------------
+@font-face {
+  font-family: "AXis";
+  src: url("/fonts/axis-bold.woff2") format("woff2");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilmer";
+  src: url("/fonts/gilmer-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Gilmer";
+  src: url("/fonts/gilmer-medium.woff2") format("woff2");
+  font-weight: 500;
+  font-display: swap;
+}
+----------------------------------------------------------- */

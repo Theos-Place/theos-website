@@ -1,0 +1,16 @@
+---
+// Envoltorio de sección. Uso:
+// <Seccion titulo="Eventos" bajada="..." alt> ...contenido... </Seccion>
+const { titulo, bajada, alt = false, id } = Astro.props;
+---
+<section class={`seccion ${alt ? 'seccion--alt' : ''}`} id={id}>
+  <div class="contenedor">
+    {(titulo || bajada) && (
+      <div class="seccion__encabezado">
+        {titulo && <h2>{titulo}</h2>}
+        {bajada && <p class="seccion__bajada">{bajada}</p>}
+      </div>
+    )}
+    <slot />
+  </div>
+</section>

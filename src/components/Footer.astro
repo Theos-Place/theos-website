@@ -1,0 +1,95 @@
+---
+import sitio from '../data/sitio.json';
+const anio = new Date().getFullYear();
+---
+
+<footer class="footer">
+  <div class="contenedor footer__grid">
+    <div>
+      <p class="footer__lema">{sitio.lema}.</p>
+    </div>
+
+    <div>
+      <h3 class="footer__titulo">Enlaces rápidos</h3>
+      <ul class="footer__lista">
+        {sitio.enlacesRapidos.map((e) => (
+          <li><a href={e.url}>{e.texto}</a></li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="footer__titulo">Contacto</h3>
+      <ul class="footer__lista">
+        <li>
+          <span class="footer__etiqueta">WhatsApp</span>
+          <a href={sitio.contacto.whatsappLink}>{sitio.contacto.whatsapp}</a>
+        </li>
+        <li>
+          <span class="footer__etiqueta">Email</span>
+          <a href={`mailto:${sitio.contacto.email}`}>{sitio.contacto.email}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div>
+      <h3 class="footer__titulo">Seguinos</h3>
+      <p class="footer__texto">Mantente conectado con todo lo que pasa en Theos.</p>
+      <ul class="footer__lista footer__lista--inline">
+        {sitio.redes.map((r) => (
+          <li><a href={r.url} rel="noopener">{r.nombre}</a></li>
+        ))}
+      </ul>
+    </div>
+  </div>
+
+  <div class="contenedor footer__legal">
+    <p>© {anio} {sitio.nombre}</p>
+  </div>
+</footer>
+
+<style>
+  .footer {
+    background: var(--color-ultra-blue);
+    color: var(--color-blanco);
+    padding-block: var(--esp-16) var(--esp-6);
+    margin-top: var(--esp-24);
+  }
+  .footer__grid {
+    display: grid;
+    gap: var(--esp-8);
+    grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr));
+  }
+  .footer__lema {
+    font-family: var(--fuente-titulo);
+    font-size: var(--texto-lg);
+  }
+  .footer__titulo {
+    font-size: var(--texto-base);
+    margin-bottom: var(--esp-3);
+  }
+  .footer__lista {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-2);
+    font-size: var(--texto-sm);
+  }
+  .footer__lista--inline { flex-direction: row; gap: var(--esp-4); }
+  .footer__etiqueta {
+    display: block;
+    opacity: 0.65;
+    font-size: var(--texto-xs);
+  }
+  .footer__texto { font-size: var(--texto-sm); opacity: 0.8; margin-bottom: var(--esp-3); }
+  .footer a:hover { color: var(--color-azul-pasivo); }
+  .footer__legal {
+    margin-top: var(--esp-12);
+    padding-top: var(--esp-6);
+    border-top: 1px solid rgb(255 255 255 / 0.15);
+    font-size: var(--texto-xs);
+    opacity: 0.7;
+  }
+</style>

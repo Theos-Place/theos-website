@@ -1,0 +1,22 @@
+---
+const { evento } = Astro.props;
+---
+<article class="tarjeta">
+  <img class="tarjeta__media" src={evento.imagen} alt="" loading="lazy" />
+  <time class="tarjeta__fecha" datetime={evento.fecha}>{evento.fechaTexto}</time>
+  <h3>{evento.titulo}</h3>
+  <p class="tarjeta__texto">{evento.descripcion}</p>
+  {evento.inscripcion && (
+    <a class="boton boton--primario" href={evento.inscripcion} rel="noopener">Apuntate</a>
+  )}
+</article>
+
+<style>
+  .tarjeta__fecha {
+    font-size: var(--texto-xs);
+    font-weight: var(--peso-medio);
+    color: var(--color-primario);
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+</style>

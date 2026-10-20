@@ -1,0 +1,13 @@
+[
+  {
+    "slug": "TODO-actividad",
+    "titulo": "TODO: nombre de la actividad",
+    "categoria": "TODO",
+    "fechaTexto": "TODO",
+    "lugar": "TODO",
+    "descripcion": "TODO",
+    "imagen": "/img/actividades/TODO.jpg",
+    "url": "#TODO",
+    "activo": true
+  }
+]

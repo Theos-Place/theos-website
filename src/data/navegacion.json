@@ -1,0 +1,8 @@
+[
+  { "texto": "¿Quiénes Somos?",     "url": "/quienes-somos" },
+  { "texto": "Sedes",               "url": "/sedes" },
+  { "texto": "Estudios Bíblicos",   "url": "/estudios-biblicos" },
+  { "texto": "Actividades",         "url": "/actividades" },
+  { "texto": "Donaciones",          "url": "/donaciones" },
+  { "texto": "Puestos de Servicio", "url": "/puestos-de-servicio" }
+]

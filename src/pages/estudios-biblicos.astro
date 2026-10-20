@@ -1,0 +1,58 @@
+---
+import Base from '../layouts/Base.astro';
+import Hero from '../components/Hero.astro';
+import Seccion from '../components/Seccion.astro';
+import Tarjeta from '../components/Tarjeta.astro';
+import datos from '../data/estudios.json';
+---
+
+<Base titulo="Estudios Bíblicos" descripcion="TODO: descripción de esta página.">
+  <Hero titulo="Estudios Bíblicos" />
+
+  <Seccion titulo="¿Qué es un Estudio de Biblia?">
+    <p>{datos.queEs}</p>
+    <div class="grilla" style="margin-top: var(--esp-8)">
+      <Tarjeta titulo="Niveles 1 al 4"   texto="TODO" url="#niveles" />
+      <Tarjeta titulo="Capacitaciones"   texto="TODO" url="#capacitaciones" />
+      <Tarjeta titulo="¿Querés retomar?" texto="TODO" url="#retomar" />
+    </div>
+  </Seccion>
+
+  <Seccion titulo="Mi primer Estudio de Biblia" id="niveles" alt>
+    <div class="grilla">
+      {datos.niveles.map((n) => (
+        <Tarjeta titulo={n.titulo} texto={n.texto} etiqueta={n.duracion} />
+      ))}
+    </div>
+  </Seccion>
+
+  <Seccion titulo="Capacitándome para servir a otros" id="capacitaciones">
+    <div class="tarjeta" style="margin-bottom: var(--esp-8)">
+      <h3>¿Cuándo y cómo me inscribo?</h3>
+      <p class="tarjeta__texto">{datos.inscripcion.texto}</p>
+      <a class="boton boton--primario" href={datos.inscripcion.url} rel="noopener">
+        Inscribirme
+      </a>
+    </div>
+    <div class="grilla">
+      {datos.capacitaciones.map((c) => <Tarjeta titulo={c.titulo} texto={c.texto} />)}
+    </div>
+  </Seccion>
+
+  <Seccion titulo="¿Querés retomar?" id="retomar" alt>
+    <div class="grilla grilla--2">
+      {datos.retomar.map((r) => (
+        <Tarjeta titulo={r.titulo} texto={r.texto} url={r.url} />
+      ))}
+    </div>
+  </Seccion>
+
+  <Seccion titulo="Plan de Estudios Bíblicos">
+    <p>{datos.planEstudios.texto}</p>
+    <p style="margin-top: var(--esp-6)">
+      <a class="boton boton--secundario" href={datos.planEstudios.archivo}>
+        Ver el plan completo
+      </a>
+    </p>
+  </Seccion>
+</Base>
